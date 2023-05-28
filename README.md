@@ -60,3 +60,26 @@ elapsed_time = time.time() - start_time
 
 피보나치 수열을 또 다른 방식으로 구하기 위해 함수를 반복문으로 짠 코드이다.<br>
 for 문이 하나이므로 즉, n의 크기에 따라 계산 속도가 선형적으로 비례한다.<br> ----> 속도 매우 빠름..성능 good
+
+## 수식 이용
+
+```python
+import time
+
+def equation_fibonacci(n):
+    root_5 = 5 ** (1/2)
+    return (1 / root_5) * ( ( (1 + root_5) / 2)**n - ( (1 - root_5) / 2)**n )
+
+start_time = time.time()
+
+print(equation_fibonacci(50))
+
+elapsed_time = time.time() - start_time
+
+print("총 소요시간: {}초".format(elapsed_time))
+
+```
+
+피보나치 수열 유도 공식을 이용해서 50번째의 피보나치 수를 구하는 코드입니다.<br>
+이 방식도 반복문과 같이 속도가 빠르다.<br>
+----> 성능 good!
