@@ -6,7 +6,7 @@ def equation_fibonacci(n):
 
 start_time = time.time()
 
-print(equation_fibonacci(40))
+print(equation_fibonacci(50))
 
 elapsed_time = time.time() - start_time
 

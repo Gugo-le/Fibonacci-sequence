@@ -8,7 +8,7 @@ def recursive_fibonacci(n):
 
 start_time = time.time()
 
-print(recursive_fibonacci(40))
+print(recursive_fibonacci(50))
 
 elapsed_time = time.time() - start_time
 

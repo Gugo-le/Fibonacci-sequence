@@ -12,7 +12,7 @@ def iter_fibonacci(n):
   
 start_time = time.time()
 
-print(iter_fibonacci(40))
+print(iter_fibonacci(50))
 
 elapsed_time = time.time() - start_time
 
