@@ -34,3 +34,29 @@ print("총 소요시간: {}초".format(elapsed_time))
 return 하는 곳에서 함수 인자가 각각 n=49, n=48이 들어가는<br>
 함수를 호출합니다. ----> 엄청난 성능 저하
 
+
+## 반복문의 이용
+
+```python
+import time
+
+def iter_fibonacci(n):
+    a, b = 1, 1
+    if n < 2:
+        return 1
+    else:
+        for i in range(n-2):
+            c = a + b
+            a, b = b, c
+        return c   
+  
+start_time = time.time()
+
+print(iter_fibonacci(50))
+
+elapsed_time = time.time() - start_time
+
+```
+
+피보나치 수열을 또 다른 방식으로 구하기 위해 함수를 반복문으로 짠 코드이다.<br>
+for 문이 하나이므로 즉, n의 크기에 따라 계산 속도가 선형적으로 비례한다.<br> ----> 속도 매우 빠름..성능 good
